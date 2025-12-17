@@ -1,0 +1,41 @@
+Ver video de YouTube
+1. Inicio
+2. Encender la computadora
+3. Loguiarse en la computadora
+4. Abrir el browser
+5. Digitar la dirección de YouTube en el browser
+6. Buscar el video que desea ver en el buscador de YouTube
+7. Seleccionar el video
+8. Presionar play en el video seleccionado para reproducirlo
+10 Fin
+
+Rutina Diaria
+1.  Inicio
+2.  Despertar
+3.  Si sonó la alarma del despetador
+		1. Apagar alarma
+4.  Levantarme
+5.  Si mi hijo tiene escuela
+		1. Alistar a mi hijo para la escuela
+6.  Entrenar
+		1. -Si toca nadar
+				a. Alistar la de indumentaria de nadar 
+				b. Ir a la piscina
+				c. Nadar		
+			-SiNo toca correr
+				a. Alistar la indumentaria de correr
+				b. Ir a correr 
+			-SiNo
+				a. Alistar la indcumentaria de ciclismo
+				b. Realizar la ruta de ciclismo
+		2. Regresar a la casa
+7.  Si es dia laboral
+		1. Revisar el calendario de reuniones
+		2. Tomar las reuniones 
+		3. Mientras no tenga reuniones y dia laboral no a concluido
+			a. Trabajar en asignaciones
+		4. Desconectarme de toda actividad laboral
+8.  Compartir con la familia
+9.  Acostar y domir a mi hijo
+10. Acostarme a dormir
+11. Fin
