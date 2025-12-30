@@ -41,7 +41,7 @@ def get_name_info():
             display_get_name_info = False
         
         else:
-            print("El nombre completo no puede ser un valor vacío ni contener números")
+            print("El nombre completo no puede ser un valor vacío ni contener números o caracteres especiales")
     return name
 
 def get_section_info():

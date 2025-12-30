@@ -1,7 +1,7 @@
 import re
 
 def is_valid_name(name):
-    pattern = r"^[^0-9]+$"
+    pattern = r"^[A-Za-zÁÉÍÓÚáéíóúÑñ]+([ '-][A-Za-zÁÉÍÓÚáéíóúÑñ]+)*$"
 
     if not bool(re.match(pattern, name)):
         return False    
