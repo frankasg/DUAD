@@ -1,7 +1,8 @@
 import math
 
 class Circle:
-    radius = 4
+    def __init__(self, radius):
+        self.radius = radius
 
     def get_area(self):
         if self.radius < 0:
@@ -10,6 +11,6 @@ class Circle:
         return math.pi * self.radius ** 2
     
 
-circle = Circle()
+circle = Circle(4)
 area = circle.get_area()
 print(f"El area del circulo es: {area:.2f}")
