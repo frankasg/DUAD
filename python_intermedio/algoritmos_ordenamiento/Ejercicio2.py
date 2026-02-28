@@ -16,7 +16,7 @@ def bubble_sort(list:list):
 
     return list
 
-unordered_list = [42, 17, 8, 99, 23, 56, 4, 71, 12, 65, 31, 3, 88, 50]
+unordered_list = "[42, 17, 8, 99, 23, 56, 4, 71, 12, 65, 31, 3, 88, 50]"
 print(unordered_list)
 
 ordered_list = bubble_sort(unordered_list)

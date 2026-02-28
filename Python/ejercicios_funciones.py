@@ -74,9 +74,9 @@ def count_upper_and_lower_letters(value):
         
         lower_cases += 1
 
-    print(f"There's {upper_cases} upper cases and {lower_cases} lower cases")
+    return f"There's {upper_cases} upper cases and {lower_cases} lower cases"
 
-count_upper_and_lower_letters("Hola Mundo")
+print(count_upper_and_lower_letters("Hola Mundo"))
 
 #Ejercicio 6
 print("Ejercicio 6: ---------------------------------------------")
@@ -89,9 +89,9 @@ def order_words(value):
     for item in words:
         result = result + item + "-"
     
-    print(result[0:len(result)-1])
+    return result[0:len(result)-1]
 
-order_words("python-variable-funcion-computadora-monitor")
+print(order_words("python-variable-funcion-computadora-monitor"))
 
 
 #Ejercicio 7
