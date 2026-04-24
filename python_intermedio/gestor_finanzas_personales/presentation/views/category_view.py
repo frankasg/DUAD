@@ -127,8 +127,7 @@ def show_add_category_window(finance_manager:FinanceManager):
 						"Debes ingresar un nombre para la categoría.",
 						background_color=Theme.BG,
 						text_color=Theme.TEXT,
-						keep_on_top=True,
-						custom_text=("Aceptar",)
+						keep_on_top=True						
 					)
 					continue
 				
@@ -137,8 +136,7 @@ def show_add_category_window(finance_manager:FinanceManager):
 							"Ya existe una categoría con ese nombre",
 							background_color=Theme.BG,
 							text_color=Theme.TEXT,
-							keep_on_top=True,
-							custom_text=("Aceptar",)
+							keep_on_top=True							
 						)
 					continue
 				

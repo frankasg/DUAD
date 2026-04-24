@@ -331,6 +331,12 @@ def main_window():
 	
 	except Exception as ex:
 		print(f"Ha ocurrido un error inesperado. Detalle: {ex}")
+		sg.popup_error(
+						"Error inesperado",
+						background_color=Theme.BG,
+						text_color=Theme.TEXT,
+						keep_on_top=True
+					)
 
 if __name__ == "__main__":
 	main_window()
