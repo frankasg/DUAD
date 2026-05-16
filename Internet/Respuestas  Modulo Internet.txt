@@ -1,0 +1,67 @@
+1.
+
+a. Se hace un request al servidor DNS, en este caso a www.youtube.com, para obtener la IP pública de dicho servidor.
+
+b. El servidor DNS responde con dicha IP.
+
+c. Una vez que se conoce la IP, entonces se puede hacer el request usando dicha IP. Este request utiliza un protocolo HTTP, el cual debe cumplir con ciertas características para poder obtener un response.
+
+d. Por último, se retorna un response, o varios responses, con la información solicitada en el request.
+
+
+2.
+
+FrontEnd:
+Tendríamos la interfaz de usuario en la cual el usuario interactúa con la aplicación de citas. Por ejemplo, podríamos ver diferentes pantallas, como la disponibilidad de las distintas citas médicas basada en los profesionales disponibles, así como la pantalla o acción desde donde se agenda la cita.
+
+
+BackEnd:
+En esta parte tendríamos todo el código que interactúa con la interfaz de usuario para proveer la información que está siendo requerida.
+
+¿Cómo?
+Mediante APIs que se comunican con el FrontEnd. Estas APIs estarán encargadas de recibir las peticiones del FE, por ejemplo:
+"¿Existe disponibilidad para el día X?"
+
+1. El BE toma esa información.
+2. Va a una base de datos y realiza la consulta.
+3. Procede a responderle al FE con lo que encontró en base a la petición.
+
+
+Tecnologías:
+
+FE:
+- HTML
+- CSS
+- JavaScript
+
+BE:
+- Python
+- Código SQL
+- Servicios Cloud
+
+
+Comunicación FE-BE:
+
+1. El FE se comunica mediante APIs con el BE.
+
+2. Estas APIs reciben peticiones mediante el protocolo HTTP para ser procesadas.
+
+3. Cada petición HTTP contiene:
+   - Un request (donde viene la información necesaria que está siendo solicitada al servidor para ser resuelta).
+   - Un response (que es el resultado de haber procesado el request solicitado).
+
+
+3.
+
+Tipo de API | Formato de datos | Flexibilidad | Dificultad | Uso actual
+------------------------------------------------------------------------
+REST        | JSON/XML         | Alto         | Baja       | Alto
+SOAP        | XML              | Bajo         | Alta       | Bajo
+GraphQL     | JSON             | Alto         | Media      | Moderado
+
+
+Conclusión:
+
+Sin duda, para una aplicación moderna me sigo inclinando por REST, ya que es el estándar más utilizado en el mercado.
+
+Es muy flexible y poderoso, y actualmente su mantenimiento y escalabilidad siguen siendo altamente confiables.
