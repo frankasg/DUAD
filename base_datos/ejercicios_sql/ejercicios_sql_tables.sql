@@ -1,7 +1,7 @@
 -- SQLite
 CREATE TABLE products (
     product_id INTEGER PRIMARY KEY,
-    code        VARCHAR(10) NOT NULL,
+    code        VARCHAR(10) NOT NULL UNIQUE,
     name        VARCHAR(25) NOT NULL,
     price       DECIMAL(10, 2) NOT NULL,
     entry_date  TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -19,9 +19,10 @@ CREATE TABLE product_invoice (
 
 CREATE TABLE invoices (
     invoice_id      INTEGER PRIMARY KEY,
-    invoice_number  INT NOT NULL,
+    invoice_number  INT NOT NULL UNIQUE,
     purchase_date   TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    buyer_email     VARCHAR(50) NOT NULL
+    buyer_email     VARCHAR(50) NOT NULL,
+    total           INT DEFAULT 0
 );
 
 CREATE TABLE shopping_cart_product (
@@ -133,5 +134,12 @@ SELECT
 FROM content AS c
 JOIN products AS p ON p.code = c.code
 JOIN shopping_carts AS sc ON sc.buyer_email = c.buyer_email;
+
+UPDATE invoices
+SET total = (
+    SELECT COALESCE(SUM(pi.total_amount), 0)
+    FROM product_invoice AS pi
+    WHERE pi.invoice_id = invoices.invoice_id
+);
 
 COMMIT;

@@ -7,7 +7,7 @@ SELECT product_id,
        entry_date,
        brand,
        stock
-  FROM products  
+  FROM products;
 
 --2
 SELECT product_id,
@@ -18,7 +18,7 @@ SELECT product_id,
        brand,
        stock
   FROM products 
- WHERE price > 50000
+ WHERE price > 50000;
 
 --3
     SELECT i.buyer_email,
@@ -31,19 +31,21 @@ INNER JOIN product_invoice pi
         ON p.product_id = pi.product_id
 INNER JOIN invoices i
         ON pi.invoice_id = i.invoice_id
-     WHERE p.product_id = 3
+     WHERE p.product_id = 3;
 
 --4
   SELECT p.code,
        p.name,
-       SUM(pi.quantity) AS unidades_compradas,
-       SUM(pi.total_amount) AS monto_total
+       SUM(pi.quantity) AS units_purchased,
+       SUM(pi.total_amount) AS total_amount
   FROM products AS p
  INNER JOIN product_invoice AS pi
     ON p.product_id = pi.product_id
- GROUP BY p.product_id
+ GROUP BY p.product_id;
+
 
 --5
+--old version
     SELECT i.invoice_number,
         i.purchase_date,
         SUM(pi.total_amount) total
@@ -53,9 +55,19 @@ INNER JOIN product_invoice pi
 INNER JOIN products p
         ON pi.product_id = p.product_id
      WHERE i.buyer_email = 'ana@example.com'
-  GROUP BY i.invoice_number
+  GROUP BY i.invoice_number;
+
+-- new version
+    SELECT invoice_number,
+        purchase_date,
+        buyer_email,
+        total
+      FROM invoices
+     WHERE buyer_email = 'ana@example.com';
+
 
 --6
+--old version
     SELECT i.invoice_number,
         i.purchase_date,
         SUM(pi.total_amount) total
@@ -63,9 +75,18 @@ INNER JOIN products p
 INNER JOIN product_invoice pi
         ON i.invoice_id = pi.invoice_id
   GROUP BY i.invoice_number
-  ORDER BY total DESC
+  ORDER BY total DESC;
+
+--new version
+    SELECT invoice_number,
+        purchase_date,
+        buyer_email,
+        total
+      FROM invoices
+  ORDER BY total DESC;
 
 --7
+-- old version 
     SELECT i.invoice_number,
         i.purchase_date,
         SUM(pi.total_amount) total
@@ -75,4 +96,12 @@ INNER JOIN product_invoice pi
 INNER JOIN products p
         ON pi.product_id = p.product_id
      WHERE i.invoice_number = '1004'
-  GROUP BY i.invoice_number
+  GROUP BY i.invoice_number;
+
+--new version
+    SELECT invoice_number,
+        purchase_date,
+        buyer_email,
+        total
+      FROM invoices i
+     WHERE invoice_number = '1004';
