@@ -22,7 +22,7 @@ CREATE TABLE invoices (
     invoice_number  INT NOT NULL UNIQUE,
     purchase_date   TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
     buyer_email     VARCHAR(50) NOT NULL,
-    total           INT DEFAULT 0
+    total           DECIMAL(10, 2) DEFAULT 0
 );
 
 CREATE TABLE shopping_cart_product (
